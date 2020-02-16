@@ -15,21 +15,15 @@ class Todo
   end
 
   def overdue?
-    if @due_date<Date.today
-      return true
-    end
+    @due_date<Date.today
   end
 
   def due_today?
-    if @due_date == Date.today
-      return true
-    end
+    @due_date == Date.today
   end
 
   def due_later?
-    if @due_date>Date.today
-      return true
-    end
+    @due_date>Date.today
   end
 
   def to_displayable_string
